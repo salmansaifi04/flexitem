@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Flex Items</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .bg1{
+            background-color: yellow;
+        }
+        .bg2{
+            background-color: yellowgreen;
+        }
+        .bg3{
+            background-color: aqua;
+        }
+        .bg4{
+            background-color: blue;
+        }
+        .bg5{
+            background-color: brown;
+        }
+        h1{
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 2% 0;
+        }
+        .container{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
+        .container1{
+            display: flex;
+        }
+        .container2{
+            display: flex;
+            flex-direction: column;
+        }
+        .container3{
+            display: flex;
+            height: 200px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            font-size: 50px;
+            text-align: center;
+            margin: 1%;
+        }
+
+        .box1{
+            height: 200px;
+            font-size: 50px;
+            text-align: center;
+            margin: 1%;
+        }
+        .box2{
+            height: 100px;
+            width: 200px;
+            font-size: 50px;
+            text-align: center;
+            margin: 1%;
+        }
+    </style>
+</head>
+<body>
+    <h1>order</h1>
+    <div class="container">
+        <div style="order: 3;" class="box bg1">1</div>
+        <div style="order: 4;" class="box bg2">2</div>
+        <div style="order: 1;" class="box bg3">3</div>
+        <div style="order: 5;" class="box bg4">4</div>
+        <div style="order: 2;" class="box bg5">5</div>
+    </div>
+
+    <h1>flex-grow</h1>
+    <div class="container">
+        <div style="flex-grow: 1;" class="box1 bg1">1</div>
+        <div style="flex-grow: 2;" class="box1 bg2">2</div>
+        <div style="flex-grow: 1;" class="box1 bg3">1</div>
+    </div>
+
+    <h1>flex-shrink</h1>
+    <div class="container1">
+        <div style="flex-shrink: 0;" class="box bg1">1</div>
+        <div class="box bg2">2</div>
+        <div class="box bg3">3</div>
+        <div class="box bg4">4</div>
+        <div style="flex-shrink: 0;" class="box bg5">5</div>
+        <div class="box bg1">6</div>
+        <div class="box bg3">7</div>
+        <div class="box bg2">8</div>
+        <div class="box bg5">9</div>
+    </div>
+
+    <h1>flex-basis (row-direction)</h1>
+    <div class="container1">
+        <div class="box bg1">1</div>
+        <div class="box bg2">2</div>
+        <div style="flex-basis: 400px;" class="box bg3">3</div>
+        <div class="box bg4">4</div>
+        <div class="box bg5">5</div>
+    </div>
+
+    <h1>flex-basis (column-direction)</h1>
+    <div class="container2">
+        <div class="box bg1">1</div>
+        <div style="flex-basis: 400px;" class="box bg3">2</div>
+        <div class="box bg2">3</div>
+        <div class="box bg5">4</div>
+    </div>
+
+    <h1>align-self (flex-start)</h1>
+    <div class="container1">
+        <div class="box bg1">1</div>
+        <div class="box bg3">2</div>
+        <div style="height:100px; align-self: flex-start;" class="box bg2">3</div>
+        <div class="box bg5">4</div>
+    </div>
+
+    <h1>align-self (flex-end)</h1>
+    <div class="container1">
+        <div class="box bg1">1</div>
+        <div class="box bg3">2</div>
+        <div style="height:100px; align-self: flex-end;" class="box bg2">3</div>
+        <div class="box bg5">4</div>
+    </div>
+
+    <h1>align-self (center)</h1>
+    <div class="container1">
+        <div class="box bg1">1</div>
+        <div class="box bg3">2</div>
+        <div style="height:100px; align-self: center;" class="box bg2">3</div>
+        <div class="box bg5">4</div>
+    </div>
+
+    <h1>align-self</h1>
+    <div class="container3">
+        <div style="height:100px; align-self: flex-end;" class="box2 bg1">1</div>
+        <div style="height:100px; align-self: flex-start;" class="box2 bg3">2</div>
+        <div style="height:100px; align-self: flex-end;" class="box2 bg2">3</div>
+        <div style="height:100px; align-self: flex-start;" class="box2 bg5">4</div>
+    </div>
+</body>
+</html>
